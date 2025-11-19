@@ -264,7 +264,8 @@ def main():
     
     st.title("XPS to Excel Converter")
     st.markdown("Convert XPS files to PDF and extract tables to Excel format with Swedish/German number format support")
-    
+    st.markdown("**Contact:** For questions or support, please reach out to [29a16@protonmail.com](mailto:29a16@protonmail.com)")
+
     # Sidebar for options
     with st.sidebar:
         st.header("Options")
