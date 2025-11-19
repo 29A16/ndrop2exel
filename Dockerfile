@@ -22,8 +22,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 
 
 # Copy application files
-COPY ndrop2exel/streamlit_pdf_xps_extractor.py $HOME/app/
-COPY ndrop2exel/requirements.txt $HOME/app/
+COPY app/app.py $HOME/app/app.py
+COPY app/requirements.txt $HOME/app/requirements.txt
 
 
 # Install Python packages listed in requirements.txt
@@ -37,4 +37,4 @@ EXPOSE 8501
 
 HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
-ENTRYPOINT ["streamlit", "run", "streamlit_pdf_xps_extractor.py", "--server.port=8501", "--server.address=0.0.0.0", "--browser.gatherUsageStats=false"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0", "--browser.gatherUsageStats=false"]
