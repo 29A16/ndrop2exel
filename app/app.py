@@ -271,15 +271,6 @@ def main():
         include_summary = st.checkbox("Generate Combined Summary", value=True, 
                                     help="Create a summary Excel file with Sample, ng/ul, and 260/280 data from all files")
         
-        st.header("Requirements")
-        st.info("""
-        **For XPS files:** Requires `libgxps-utils` package
-        ```bash
-        sudo apt-get install libgxps-utils
-        ```
-        """)
-    
-    # File upload section
     st.header("Upload Files")
     uploaded_files = st.file_uploader(
         "Choose PDF or XPS files",
